@@ -11,7 +11,9 @@ def run():
 	headers = []
 	for field in model._meta.fields:
 		headers.append(field.name)
-	writer.writerow(headers)
+	codeWriter.writerow(headers)
+	gadgetWriter.writerow(headers)
+	garageWriter.writerow(headers)
 	code=SIGroup.objects.get(name="Code")
 	gadget=SIGroup.objects.get(name="Gadget")
 	garage=SIGroup.objects.get(name="Garage")
